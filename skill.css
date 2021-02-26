@@ -1,0 +1,131 @@
+.Main {
+    width: 50%;
+    margin: 7rem auto;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin-top: 0%;
+    flex-direction: column;
+    animation: main;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    opacity: 0;
+}
+
+@keyframes main {
+    100% {
+        opacity: 1;
+    }
+}
+
+.info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation-name: text;
+    animation-duration: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes text {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress {
+    width: 100%;
+    background-color: #0000003b;
+    border-radius: 20px;
+    overflow: hidden;
+    animation-name: mline;
+    animation-duration: 0.7s;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation-fill-mode: forwards;
+}
+
+@keyframes mline {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.line {
+    /* visibility: hidden; */
+    width: 90%;
+    display: block;
+    height: 100%;
+    background: indigo;
+    position: relative;
+    z-index: 3;
+    font-size: 1.15rem;
+    text-align: right;
+    color: white;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-weight: bold;
+    animation-name: line;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation-delay: 0.5s;
+}
+
+@keyframes line {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.skill {
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: 15px 0;
+}
+
+#HTML {
+    width: 90%;
+    background: royalblue;
+}
+
+#CSS {
+    width: 75%;
+    background: var(--clr);
+}
+
+#CPP {
+    width: 65%;
+    background: red;
+}
+
+#C {
+    width: 69%;
+    background: green;
+}
+
+#JS {
+    width: 30%;
+}
+
+h2 {
+    width: fit-content;
+    margin: 29px auto;
+    font-size: 2.7rem;
+    color: white;
+    font-weight: bolder;
+}
+
+h2::after {
+    content: '';
+    width: 100%;
+    background-color: red;
+    height: 5px;
+    display: block;
+    border-radius: 20px;
+}

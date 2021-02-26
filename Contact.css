@@ -1,0 +1,168 @@
+h2 {
+    width: fit-content;
+    margin: 29px auto;
+    font-size: 2.7rem;
+    color: white;
+    font-weight: bolder;
+}
+
+h2::after {
+    content: '';
+    width: 100%;
+    background-color: red;
+    height: 5px;
+    display: block;
+    border-radius: 20px;
+}
+
+form {
+    width: 41%;
+    height: 24rem;
+    padding: 3rem 3rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr 2.5fr 0.8fr;
+    grid-gap: 2rem;
+    grid-template-areas: 'box1 box2' 'box3 box4' 'box5 box5' 'box6 box6';
+    background-color: whitesmoke;
+    border-radius: 10px;
+    animation-name: form;
+    animation-duration: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes form {
+    100% {
+        opacity: 1;
+    }
+}
+
+form input {
+    display: block;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    box-shadow: 2px 3px 10px -5px black;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 2px transparent;
+    transition: 0.3s;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    grid-area: box3;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.box4 {
+    grid-area: box4;
+    -webkit-appearance: none;
+}
+
+.box5 {
+    grid-area: box5;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 2px 3px 10px -5px black;
+    border: none;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.box6 {
+    grid-area: box6;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: none;
+    background-color: red;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1365px) {
+    form {
+        width: 60%;
+        grid-gap: 1.5rem;
+    }
+}
+
+input[type=number]:focus,
+input[type=text]:focus,
+input[type=email]:focus {
+    border: 2px solid red;
+    box-shadow: none;
+}
+
+input[type=submit]:hover {
+    background-color: #c10000;
+    cursor: pointer;
+}
+
+.box5:focus {
+    border: 2px solid red;
+    box-shadow: none;
+}
+
+
+/*Done .html styling inlcluded here --------------*/
+
+.done {
+    width: 50%;
+    margin: 9rem auto;
+    padding: 0;
+    animation-name: form;
+    animation-duration: 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.done img {
+    width: 21%;
+    margin: auto;
+    display: block;
+}
+
+.done p {
+    color: white;
+    width: fit-content;
+    margin: auto;
+    margin-top: 2rem;
+    font-size: 22px;
+}
+
+.done a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 2rem auto;
+    width: fit-content;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    background: red;
+}
+
+.done a:hover {
+    background: #c10000;
+    cursor: pointer;
+}
